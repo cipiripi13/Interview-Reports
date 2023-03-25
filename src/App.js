@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+
+import { useState } from 'react';
+import { useEffect } from 'react';
 import './App.css';
+import { CardPlaceholder } from './components/CardPlaceholder/CardPlaceholder';
+import { Footer } from './components/Footer/Footer';
+import { Header } from './components/Header/Header';
+import { MainPage } from './components/Main Page/MainPage';
 
 function App() {
+  const[mainPage, setMainPage] = useState([]);
+  const mainFetch = () => {
+     const url = 'http://localhost:3333/api/candidates';
+  
+    fetch(url)
+    .then(response => response.json())
+    .then((data => setMainPage(data)))
+
+  }
+  useEffect(()=>{
+    mainFetch()
+  }, []);
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <MainPage mainPage={mainPage}/>
+      
+      <Footer />
     </div>
   );
 }

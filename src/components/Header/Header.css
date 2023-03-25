@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f7f7f7;
+  padding: 20px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+.btn {
+  border: 1.5px solid #ddd;
+  padding: 15px 20px;
+  cursor: pointer;
+  color: #000;
+  transition: 0.3s ease-in-out;
+  border-radius: 5px;
+}
+.btn:hover {
+  background-color: #ddd;
+  color: #000;
+  transition: 0.3s ease-in-out;
+}

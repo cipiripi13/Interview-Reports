@@ -1,0 +1,16 @@
+.card {
+  
+  border: 1px solid #ddd;
+  padding: 20px;
+  width: 340px;
+  height: 300px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.card img {
+  max-width: 120px;
+  height: auto;
+}
