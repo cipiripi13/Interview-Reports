@@ -1,11 +1,11 @@
-
+import { Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import './App.css';
-import { CardPlaceholder } from './components/CardPlaceholder/CardPlaceholder';
 import { Footer } from './components/Footer/Footer';
 import { Header } from './components/Header/Header';
 import { MainPage } from './components/Main Page/MainPage';
+import { CandidateReports } from './components/CandidateReports/CandidateReports';
 
 function App() {
   const[mainPage, setMainPage] = useState([]);
@@ -25,8 +25,8 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-        <Route path='/' element={<Candidates mainPage={mainPage}/>} />
-        <Route path='/candidate/:id' element={<SingleCandidate />} />
+        <Route path='/' element={<MainPage mainPage={mainPage} />} />
+        <Route path='/candidate/:id' element={<CandidateReports />} />
         <Route path='/*' element={<div>PAGE NOT FOUNDE!</div>} />
 
       </Routes>

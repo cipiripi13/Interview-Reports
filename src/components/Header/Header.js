@@ -1,13 +1,14 @@
 import './Header.css';
-
+import { Link } from 'react-router-dom';
 export const Header = () => {
-
-  return(
+  return (
     <div className="header">
-      <h1>Interview Reports</h1>
-      <h2>cao</h2>
-      <button className="btn">Candidates</button>
+      <Link to="/" style={{ color: 'black', textDecoration: 'none' }}>
+        <h1>Interview Reports</h1>
+      </Link>
+      <Link to="/">
+        <button className="btn">Candidates</button>
+      </Link>
     </div>
-    
-  )
-}
+  );
+};
