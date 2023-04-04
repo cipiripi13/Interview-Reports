@@ -24,8 +24,12 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <MainPage mainPage={mainPage}/>
-      
+      <Routes>
+        <Route path='/' element={<Candidates mainPage={mainPage}/>} />
+        <Route path='/candidate/:id' element={<SingleCandidate />} />
+        <Route path='/*' element={<div>PAGE NOT FOUNDE!</div>} />
+
+      </Routes>
       <Footer />
     </div>
   );
