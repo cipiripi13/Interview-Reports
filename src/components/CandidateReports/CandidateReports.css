@@ -7,21 +7,6 @@ table {
 
 }
 
-/* table tr td,
-table tr th {
-  border: 1px solid black;
-  padding: 5px;
-  width: 300px;
-  text-align: left;
-} */
-
-/* thead {
-  background-color: #ddd;
-}
-
-tbody tr:nth-child(even) {
-  background-color: #ddd;
-} */
 
 table thead tr {
   background-color: #44d3ec;
@@ -47,6 +32,8 @@ table tbody tr:hover {
 
   color: #44d3ec;
 }
+
+/* End of table styling */
 
 .eye {
   cursor: pointer;
