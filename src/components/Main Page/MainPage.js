@@ -1,19 +1,18 @@
-import "./MainPage.css";
-import { CardPlaceholder } from "../CardPlaceholder/CardPlaceholder";
-import { Card } from "../Card/Card";
-import { useState } from "react";
+import './MainPage.css';
+import { CardPlaceholder } from '../CardPlaceholder/CardPlaceholder';
+import { Card } from '../Card/Card';
+import { useState } from 'react';
 
 export const MainPage = (props) => {
   const mainPage = props.mainPage;
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState('');
 
   let placeholderArr = [];
   for (let index = 0; index <= 6; index++) {
     placeholderArr.push(index);
   }
-
-  const filtreCandidate = mainPage.filter((item) => {
-    if (search.trim() === "") {
+  const filterCandidate = mainPage.filter((item) => {
+    if (search.trim() === '') {
       return true;
     } else {
       if (item.name.toUpperCase().includes(search.trim().toUpperCase())) {
@@ -43,7 +42,7 @@ export const MainPage = (props) => {
             return <CardPlaceholder key={index} />;
           })}
         {mainPage.length > 0 &&
-          filtreCandidate.map((item, index) => {
+          filterCandidate.map((item, index) => {
             return <Card key={item.id} item={item} />;
           })}
       </div>

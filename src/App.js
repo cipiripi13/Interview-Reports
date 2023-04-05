@@ -25,7 +25,7 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-        <Route path='/' element={<MainPage mainPage={mainPage}/>} />
+        <Route path='/' element={<MainPage mainPage={mainPage} />} />
         <Route path='/candidate/:id' element={<CandidateReports />} />
         <Route path='/*' element={<div>PAGE NOT FOUNDE!</div>} />
 
