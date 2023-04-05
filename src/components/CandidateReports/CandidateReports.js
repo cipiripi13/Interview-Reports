@@ -20,6 +20,12 @@ export const CandidateReports = () => {
       });
   };
 
+
+
+  // second fetch, table data
+
+
+
   const singleCandidateReportFetch = (id) => {
     const url = 'http://localhost:3333/api/reports?candidateId=' + id;
     fetch(url)
