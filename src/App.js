@@ -8,26 +8,26 @@ import { MainPage } from './components/Main Page/MainPage';
 import { CandidateReports } from './components/CandidateReports/CandidateReports';
 
 function App() {
-  const[mainPage, setMainPage] = useState([]);
+  const [mainPage, setMainPage] = useState([]);
   const mainFetch = () => {
-     const url = 'http://localhost:3333/api/candidates';
-  
+    const url = 'http://localhost:3333/api/candidates';
+
     fetch(url)
-    .then(response => response.json())
-    .then((data => setMainPage(data)))
+      .then(response => response.json())
+      .then((data => setMainPage(data)))
 
   }
-  useEffect(()=>{
+  useEffect(() => {
     mainFetch()
   }, []);
-  
+
   return (
     <div className="App">
       <Header />
       <Routes>
         <Route path='/' element={<MainPage mainPage={mainPage} />} />
         <Route path='/candidate/:id' element={<CandidateReports />} />
-        <Route path='/*' element={<div>PAGE NOT FOUNDE!</div>} />
+        <Route path='/*' element={<div>PAGE NOT FOUND!</div>} />
 
       </Routes>
       <Footer />
