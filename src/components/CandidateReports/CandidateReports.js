@@ -86,7 +86,7 @@ export const CandidateReports = () => {
                   <td> {item.companyName} </td>
                   <td> {formattedDate} </td>
                   <td> {item.status} </td>
-                  <td> <span > <AiOutlineEye /> </span> </td>
+                  <td> <span className='eye'> <AiOutlineEye /> </span> </td>
                 </tr>
               )
             })
