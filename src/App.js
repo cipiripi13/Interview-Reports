@@ -1,4 +1,4 @@
-
+import { Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { Route, Routes } from 'react-router';
@@ -8,6 +8,7 @@ import { CardPlaceholder } from './components/CardPlaceholder/CardPlaceholder';
 import { Footer } from './components/Footer/Footer';
 import { Header } from './components/Header/Header';
 import { MainPage } from './components/Main Page/MainPage';
+import { CandidateReports } from './components/CandidateReports/CandidateReports';
 
 function App() {
   const [mainPage, setMainPage] = useState([]);

@@ -1,6 +1,5 @@
 import { useNavigate } from 'react-router';
 import './card.css'
-
 export const Card = (props) => {
   //uvodimo ovaj hook da bismo lakse navigirali tj.kretali se kroz nase rute 
   const navigate = useNavigate();
@@ -11,7 +10,6 @@ export const Card = (props) => {
   const email = item.email;
   // console.log(avatar);
   console.log(item);
-
   // u ovoj f-ji samo kazemo gde hocemo na klik da nas vodi ta f-ja
   //u nasem slucaju mi cemo samo menjati rutu i hocemo da se prebacimo na rutu koju imamo u kompon. CandidateReports.js
   //zato kada kliknemo na karticu on ce uhvatiti taj id i ubaciti ga u rutu i povuci podatke sa servera
@@ -26,7 +24,6 @@ export const Card = (props) => {
       <br />
       <p>{item.name}</p>
       <p>{email}</p>
-
     </div>
   )
 }
