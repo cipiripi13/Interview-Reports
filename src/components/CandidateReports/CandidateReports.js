@@ -2,11 +2,14 @@ import './CandidateReports.css';
 import { useEffect, useState } from 'react';
 import { AiOutlineEye } from "react-icons/ai";
 import { useParams } from 'react-router';
+import { ModalReport } from '../ModalReport/ModalReport';
 
 export const CandidateReports = () => {
   const { id } = useParams();
   const [candidate, setCandidate] = useState([]);
   const [candidateReports, setCandidateReports] = useState([]); //Data for table
+  const [modalOpened, setModalOpened] = useState(false);
+  const [choosenReport, setChoosenReport] = useState(null);
 
   const singleCandidateFetch = (id) => {
     const url = 'http://localhost:3333/api/candidates?id=' + id;
@@ -43,6 +46,15 @@ export const CandidateReports = () => {
     singleCandidateReportFetch(id);
 
   }, [id]);
+
+  const handleClickReport = (report) => {
+    setModalOpened(true);
+    setChoosenReport(report);
+  }
+  const closeModal = () => {
+    setModalOpened(false)
+    setChoosenReport(null)
+  }
 
   const dateString = `${candidate.birthday}`;
   const date = new Date(dateString);
@@ -89,13 +101,16 @@ export const CandidateReports = () => {
                   <td> {item.companyName} </td>
                   <td> {formattedDate} </td>
                   <td> {item.status} </td>
-                  <td> <span className='eye'> <AiOutlineEye /> </span> </td>
+                  <td> <span className='eye' onClick={(e) =>{ handleClickReport(item)}}> <AiOutlineEye /> </span> </td>
                 </tr>
               )
             })
           }
         </tbody>
       </table>
+      {
+        modalOpened && (<ModalReport closeModal = {closeModal} report={choosenReport}  />)
+      }
     </div>
   )
 }
