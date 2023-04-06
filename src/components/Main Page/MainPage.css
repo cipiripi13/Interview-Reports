@@ -1,7 +1,3 @@
-.App .main {
-  flex: 1;
-}
-
 .candidates{
   display: flex;
   justify-content: space-between;

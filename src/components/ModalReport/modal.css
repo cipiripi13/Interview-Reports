@@ -1,0 +1,74 @@
+/* ova klasa se odnosi na ono crno - kao crnu pozadinu iza modala */
+.modal-overlay {
+  /* zanci da je fiksiran i da se obazire samo na ekran */
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  /* sirina prozora */
+  width: 100vw;
+  /* visina prozora */
+  height: 100vh;
+  /* 0.7 je providnost */
+  background-color: rgba(0,0,0,0.7);
+  color: white;
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .modal -- prostor u kome je smesten sam tekst */
+.modal-overlay .modal {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  max-width: 700px;
+  max-height: 80vh;
+  overflow-y: auto;
+
+  position: relative;
+}
+
+/* .close --- odnosi se na x koji zatvara taj modal */
+.modal-overlay .close {
+  position: absolute;
+  z-index: 99;
+  /* odredjujemo ovde poziciju i sirinu i visinu */
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  /* sa ovim ga centriramo po visini */
+  line-height: 28px;
+
+  /* da je okrugao i x je bele boje na crnoj pozadini */
+  border-radius: 100%;
+  background-color: rgba(0,0,0,0.7);
+  color: white;
+  font-size: 28px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.modal h1 {
+  border-bottom: 1px solid #ddd ;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.modal span{
+  color: rgb(134, 126, 126);
+}
+.m{
+  display: flex;
+}
+.general{
+  flex: 1;
+}
+.note{
+  flex: 1;
+}
