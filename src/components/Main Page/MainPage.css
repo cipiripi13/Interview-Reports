@@ -1,3 +1,14 @@
+
+/* svojstvo vezano za app.css
+i ovo ce samo naduvati kontet u main-u onoliko koliko treba tom sadrzaju da se prikaze
+roditelj App ima display flex
+a njegovo dete main prima to flex:1 svojstvo */
+
+/* STICKY footer zanci daa u odnosu na visinu prozora ce se footer zalepiti za dno */
+.App .main {
+  flex: 1;
+}
+
 .candidates{
   display: flex;
   justify-content: space-between;

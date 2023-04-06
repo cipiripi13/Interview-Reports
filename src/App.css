@@ -12,8 +12,24 @@ body {
   font-family: "Oswald", sans-serif;
 }
 
-.App{
+body.modal-opened {
+  height: 100%;
+  overflow: hidden;
+}
+
+.App {
   width: 90%;
   margin: 0 auto;
-  border: 1px solid black;
+  border: 1px solid #ddd;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+
+  /* Ubacili sva ova svojstva  */
+  display: flex;
+  flex-direction: column;
+  /* da ne iskacu nikakve nove kolone */
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+
+  /* da po sirini svi budu isti */
+  align-items: stretch; 
 }
