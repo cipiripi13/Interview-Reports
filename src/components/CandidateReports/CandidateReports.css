@@ -4,24 +4,37 @@ table {
   border-collapse: collapse;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   width: 100%;
+  border: 1px solid rgb(90, 89, 89);
 
 }
 
-table tr td,
-table tr th {
-  border: 1px solid black;
-  padding: 5px;
-  width: 300px;
+
+table thead tr {
+  background-color: #44d3ec;
+  color: rgb(112, 21, 14);
   text-align: left;
+  font-size: 20px;
 }
 
-thead {
-  background-color: #ddd;
+table th,
+table td {
+  padding: 12px 15px;
 }
 
-tbody tr:nth-child(even) {
-  background-color: #ddd;
+table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
 }
+
+table tbody tr:last-of-type {
+  border-bottom: 2px solid #44d3ec;
+}
+
+table tbody tr:hover {
+
+  color: #44d3ec;
+}
+
+/* End of table styling */
 
 .eye {
   cursor: pointer;

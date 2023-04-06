@@ -22,7 +22,7 @@ function App() {
 
   useEffect(() => {
     mainFetch()
-    // usersFetch()
+
   }, []);
 
   return (

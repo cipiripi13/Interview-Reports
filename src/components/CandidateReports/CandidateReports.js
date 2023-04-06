@@ -101,7 +101,7 @@ export const CandidateReports = () => {
                   <td> {item.companyName} </td>
                   <td> {formattedDate} </td>
                   <td> {item.status} </td>
-                  <td> <span className='eye' onClick={(e) => {handleClickReport(item)}}> <AiOutlineEye /> </span> </td>
+                  <td> <span className='eye' onClick={(e) => { handleClickReport(item) }}> <AiOutlineEye /> </span> </td>
                 </tr>
               )
             })
