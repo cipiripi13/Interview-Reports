@@ -2,6 +2,7 @@ import './MainPage.css';
 import { CardPlaceholder } from '../CardPlaceholder/CardPlaceholder';
 import { Card } from '../Card/Card';
 import { useState } from 'react';
+import { CgSearch } from "react-icons/cg"
 
 
 export const MainPage = (props) => {
@@ -27,15 +28,20 @@ export const MainPage = (props) => {
     <div className="main">
       <div className="candidates">
         <h2>Candidates</h2>
-        <input
-          type="text"
-          placeholder="Search..."
-          name="search"
-          value={search}
-          onChange={(e) => {
-            setSearch(e.target.value);
-          }}
-        />
+        <div className='searchBox'>
+          <input className='searchInput'
+            type="text"
+            placeholder="Search..."
+            name="search"
+            value={search}
+            onChange={(e) => {
+              setSearch(e.target.value);
+            }}
+          />
+          <button className='searchButton'>
+            <i className='material-icons'><CgSearch /></i>
+          </button>
+        </div>
       </div>
       <div className="candidate-list">
         {mainPage.length === 0 &&
