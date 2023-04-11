@@ -9,7 +9,7 @@
   /* visina prozora */
   height: 100vh;
   /* 0.7 je providnost */
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0, 0, 0, 0.7);
   color: white;
   padding: 30px;
 
@@ -46,7 +46,7 @@
 
   /* da je okrugao i x je bele boje na crnoj pozadini */
   border-radius: 100%;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0, 0, 0, 0.7);
   color: white;
   font-size: 28px;
   text-align: center;
@@ -54,21 +54,24 @@
 }
 
 .modal h1 {
-  border-bottom: 1px solid #ddd ;
+  border-bottom: 1px solid #ddd;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   margin-bottom: 20px;
   padding: 10px;
 }
 
-.modal span{
+.modal span {
   color: rgb(134, 126, 126);
 }
-.m{
+
+.m {
   display: flex;
 }
-.general{
+
+.general {
   flex: 1;
 }
-.note{
+
+.note {
   flex: 1;
 }
