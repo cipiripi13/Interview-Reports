@@ -66,13 +66,19 @@ export const CandidateReports = () => {
       {candidate && (
         <div className="data">
           <div className="data-img">
-            <img src={candidate.avatar} alt="img" />
+            <img className='img' src={candidate.avatar} alt="img" />
           </div>
-          <div className="data-list">
-            <span>Name: {candidate.name}</span>
-            <span> Date of Birth: {formattedDateBirthday} </span>
-            <span>Email: {candidate.email}</span>
-            <span>Education: {candidate.education}</span>
+           <div className="name-email">
+            <p className="name">Name:</p>
+            <p>{candidate.name}</p>
+            <p className="email">Email:</p>
+            <p>{candidate.email}</p>
+          </div>
+          <div className="birth-education">
+            <p className="birthday">Date of birth:</p>
+            <p>{formattedDateBirthday}</p>
+            <p className="education">Education:</p>
+            <p>{candidate.education}</p>
           </div>
         </div>
       )}
