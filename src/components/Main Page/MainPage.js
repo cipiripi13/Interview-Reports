@@ -27,6 +27,22 @@ export const MainPage = (props) => {
     <div className="main">
       <div className="candidates">
         <h2>Candidates</h2>
+
+        <div className="searchBox">
+          <input className="searchInput"
+            type="text"
+            placeholder="Search..."
+            name="search"
+            value={search}
+            onChange={(e) => {
+              setSearch(e.target.value);
+            }}
+          />
+          <button className="searchButton">
+            <i className="material-icons"><CgSearch /></i>
+          </button>
+        </div>
+
         <input
           type="text"
           placeholder="Search..."
@@ -36,6 +52,7 @@ export const MainPage = (props) => {
             setSearch(e.target.value);
           }}
         />
+
       </div>
       <div className="candidate-list">
         {mainPage.length === 0 &&
