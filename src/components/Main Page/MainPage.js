@@ -28,8 +28,8 @@ export const MainPage = (props) => {
     <div className="main">
       <div className="candidates">
         <h2>Candidates</h2>
-        <div className='searchBox'>
-          <input className='searchInput'
+        <div className="searchBox">
+          <input className="searchInput"
             type="text"
             placeholder="Search..."
             name="search"
@@ -38,8 +38,8 @@ export const MainPage = (props) => {
               setSearch(e.target.value);
             }}
           />
-          <button className='searchButton'>
-            <i className='material-icons'><CgSearch /></i>
+          <button className="searchButton">
+            <i className="material-icons"><CgSearch /></i>
           </button>
         </div>
       </div>
