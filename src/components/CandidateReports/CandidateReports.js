@@ -3,48 +3,29 @@ import { useEffect, useState } from 'react';
 import { AiOutlineEye } from "react-icons/ai";
 import { useParams } from 'react-router';
 import { ModalReport } from '../ModalReport/ModalReport';
+import DetailsCandidateReport from './DetailsCandidateReport';
 
 export const CandidateReports = () => {
   const { id } = useParams();
-  const [candidate, setCandidate] = useState([]);
+ 
   const [candidateReports, setCandidateReports] = useState([]); //Data for table
   const [modalOpened, setModalOpened] = useState(false);
   const [choosenReport, setChoosenReport] = useState(null);
 
-  const singleCandidateFetch = (id) => {
-    const url = 'http://localhost:3333/api/candidates?id=' + id;
-
-    fetch(url)
-      .then((response) => response.json())
-      .then((data) => {
-        if (data[0] && data[0].id) {
-          setCandidate(data[0]);
-        }
-      });
-  };
-
-
-
   // second fetch, table data
-
-
 
   const singleCandidateReportFetch = (id) => {
     const url = 'http://localhost:3333/api/reports?candidateId=' + id;
     fetch(url)
       .then(response => response.json())
       .then((data => {
-
         setCandidateReports(data)
-
       }))
   };
 
 
   useEffect(() => {
-    singleCandidateFetch(id);
     singleCandidateReportFetch(id);
-
   }, [id]);
 
   const handleClickReport = (report) => {
@@ -56,32 +37,12 @@ export const CandidateReports = () => {
     setChoosenReport(null)
   }
 
-  const dateString = `${candidate.birthday}`;
-  const date = new Date(dateString);
-  const formattedDateBirthday = date.toDateString();
+ 
   return (
     <div className="candidate-reports">
       <h3>Candidate Reports - Candidate Id No-{id}</h3>
-
-      {candidate && (
-        <div className="data">
-          <div className="data-img">
-            <img className='img' src={candidate.avatar} alt="img" />
-          </div>
-           <div className="name-email">
-            <p className="name">Name:</p>
-            <p>{candidate.name}</p>
-            <p className="email">Email:</p>
-            <p>{candidate.email}</p>
-          </div>
-          <div className="birth-education">
-            <p className="birthday">Date of birth:</p>
-            <p>{formattedDateBirthday}</p>
-            <p className="education">Education:</p>
-            <p>{candidate.education}</p>
-          </div>
-        </div>
-      )}
+      {/* display details data */}
+      <DetailsCandidateReport />
       {/* display table data */}
       <h2>Reports</h2>
       <table className='table'>
@@ -95,8 +56,6 @@ export const CandidateReports = () => {
         </thead>
         <tbody>
           {
-
-
             candidateReports.map((item) => {
 
               const dateString = `${item.interviewDate}`;

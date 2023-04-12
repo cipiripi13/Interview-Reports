@@ -5,9 +5,7 @@ table {
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   width: 100%;
   border: 1px solid rgb(90, 89, 89);
-
 }
-
 
 table thead tr {
   background-color: #44d3ec;
@@ -30,7 +28,6 @@ table tbody tr:last-of-type {
 }
 
 table tbody tr:hover {
-
   color: #44d3ec;
 }
 
@@ -40,16 +37,14 @@ table tbody tr:hover {
   cursor: pointer;
 }
 
-
 /* Table styling ends here */
-
 
 .candidate-reports {
   padding: 20px;
-
 }
 
 .data {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -57,7 +52,7 @@ table tbody tr:hover {
   align-items: center;
   gap: 5%;
   border-radius: 5px;
-  margin: 70px auto;
+  margin: 30px auto;
 }
 .data-img {
   display: flex;
@@ -95,11 +90,12 @@ table tbody tr:hover {
 .education {
   font-size: 15px;
   color: #232323;
-  font-weight: bold;
   flex: 1;
 }
 
-
+small {
+  margin-right: 5px;
+}
 h3,
 h2 {
   margin-bottom: 15px;
