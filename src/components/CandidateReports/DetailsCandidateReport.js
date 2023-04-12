@@ -49,7 +49,7 @@ export default function DetailsCandidateReport() {
           </small>
           Email:
         </p>
-        <p>{candidate.email}</p>
+        <p style={{ textTransform: 'lowercase' }}>{candidate.email}</p>
       </div>
       <div className="birth-education">
         <p className="birthday">
