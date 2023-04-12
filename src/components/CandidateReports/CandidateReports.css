@@ -5,9 +5,7 @@ table {
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   width: 100%;
   border: 1px solid rgb(90, 89, 89);
-
 }
-
 
 table thead tr {
   background-color: #44d3ec;
@@ -30,7 +28,6 @@ table tbody tr:last-of-type {
 }
 
 table tbody tr:hover {
-
   color: #44d3ec;
 }
 
@@ -40,71 +37,66 @@ table tbody tr:hover {
   cursor: pointer;
 }
 
-
 /* Table styling ends here */
-/* ***********************************************************************************88 */
 
 .candidate-reports {
   padding: 20px;
-
 }
-
+/* Details candidate  */
 .data {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
-
-  padding: 20px;
-  margin-bottom: 15px;
-  border-bottom: 1px solid #ddd;
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-  margin-bottom: 20px;
-  height: 40vh;
-
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5%;
+  border-radius: 5px;
+  margin: 30px auto;
 }
-
-.data-list {
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-
-
-}
-
-.data-img:nth-child(1) {
-
-  /* height: 150px; */
-  width: 30%;
+.data-img {
   display: flex;
   justify-content: center;
-  align-items: center;
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-
+  flex: 1;
 }
-
-.data-img:nth-child(1) img {
-  width: 100%;
-  max-width: 120px;
+.img {
+  width: 160px;
   height: auto;
-  border: 1px solid #ddd;
   border-radius: 50%;
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-
+  background-color: white;
 }
-
-.data span {
-  padding: 10px;
-  max-width: 100%;
-  height: 200px;
+.name-email {
+  flex: 1;
   display: flex;
+  flex-direction: column;
   flex-wrap: nowrap;
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-  align-items: center;
-
+  justify-content: flex-start;
 }
 
+.name-email p:nth-child(even),
+.birth-education p:nth-child(even) {
+  font-size: 25px;
+  padding: 20px 0;
+  
+}
+
+.birth-education {
+  flex: 1;
+}
+
+.avatar,
+.name,
+.birthday,
+.email,
+.education {
+  font-size: 15px;
+  color: #232323;
+  flex: 1;
+}
+
+small {
+  margin-right: 5px;
+}
 h3,
 h2 {
   margin-bottom: 15px;
