@@ -25,6 +25,8 @@ export const MainPage = (props) => {
     <div className="main">
       <div className="candidates">
         <h2>Candidates</h2>
+
+
         <div className="searchBox">
           <input className="searchInput"
             type="text"
@@ -39,6 +41,7 @@ export const MainPage = (props) => {
             <i className="material-icons"><CgSearch /></i>
           </button>
         </div>
+        
       </div>
       <div className="candidate-list">
         {mainPage.length === 0 &&
