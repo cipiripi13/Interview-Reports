@@ -1,7 +1,6 @@
-
+import { Route, Routes } from 'react-router';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import { Route, Routes } from 'react-router';
 import './App.css';
 import { CandidateReports } from './components/CandidateReports/CandidateReports';
 import { Footer } from './components/Footer/Footer';
