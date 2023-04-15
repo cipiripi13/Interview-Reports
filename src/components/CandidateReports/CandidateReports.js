@@ -7,7 +7,8 @@ import DetailsCandidateReport from './DetailsCandidateReport';
 
 export const CandidateReports = () => {
   const { id } = useParams();
- 
+
+
   const [candidateReports, setCandidateReports] = useState([]); //Data for table
   const [modalOpened, setModalOpened] = useState(false);
   const [choosenReport, setChoosenReport] = useState(null);
@@ -37,7 +38,7 @@ export const CandidateReports = () => {
     setChoosenReport(null)
   }
 
- 
+
   return (
     <div className="candidate-reports">
       <h3>Candidate Reports - Candidate Id No-{id}</h3>
@@ -60,7 +61,8 @@ export const CandidateReports = () => {
 
               const dateString = `${item.interviewDate}`;
               const date = new Date(dateString);
-              const formattedDate = date.toDateString()
+              const formattedDate = date.toDateString();
+
               return (
                 <tr key={item.id}>
                   <td> {item.companyName} </td>

@@ -36,6 +36,8 @@ function App() {
 
       </Routes>
 
+      <h1>Šta ćemo sa projektom?</h1>
+
       <Footer />
     </div>
   );
